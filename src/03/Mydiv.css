@@ -1,0 +1,74 @@
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-color: darkblue;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+}
+
+.mydiv1, .mydiv2{
+    display: flex;
+     /* column 방향 밑으로, row 방향 옆으로  */
+    flex-direction: column; 
+    justify-content: top;
+    align-items: center;
+}
+
+.mydiv1{
+    width: 30vw;
+    height: 90vh;
+    background-color: azure;
+}
+
+.mydiv2{
+    width: 70vw;
+    height: 90vh;
+}
+
+.mydiv11, .mydiv21{
+    width: 80%;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mydiv11 > p, .mydiv21 > p {
+    font-size: 15px;
+    color: blue;
+}
+
+.divbt {
+    margin-top: 10px;
+}
+
+.divbt > button, .divbt > span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+

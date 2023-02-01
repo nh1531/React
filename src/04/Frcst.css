@@ -1,0 +1,74 @@
+/* box 태그-> width, heigth 잡을 수 있음
+inline -> 잡을 수 없음 */
+
+.header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+}
+
+.main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.mainbox1, .mainbox2{
+    display: flex;
+    margin-top: 10px;
+}
+
+.mainbox1{
+    width: 30vw;
+    height: 90vh;
+    /* flex-direction : column 이면 justify-content과 align-items이 바뀜*/
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.mainbox2{
+    width: 50vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: top;
+}
+
+.dtdiv1 {
+    display: flex;
+    width: 25vw;
+    height: 8vh;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.dtdiv1:hover, .dtdiv1:active{
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}
+
+.detail{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: beige;
+    padding: 10px;
+}
+
+.lired{
+    background-color: red;
+    color: white;
+}

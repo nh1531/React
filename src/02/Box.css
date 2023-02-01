@@ -1,0 +1,87 @@
+.bheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vw 화면의 넓이만큼 */
+    width: 100vw; 
+    height: 10vh;
+    background-color: darkblue;
+    color: white;
+}
+
+h1{
+    font-size: 4vh;
+}
+
+.content {
+    display: flex;
+    /* row라서 옆으로 감. 밑으로 보내기 */
+    flex-direction: column;
+    /* row -> colum */
+    justify-content: top;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+
+}
+
+.rowDiv, .rowDiv0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: rgb(188, 222, 235); */
+    width: 60vw;
+    height: 6vh;
+    border-bottom: 1px solid gray;
+}
+
+.rowDiv0{
+    background-color: azure;
+}
+
+.rowDiv:hover, .rowDiv:active{
+    background-color: beige;
+}
+
+.rowDay {
+    width: 60vw;
+    height: 6vh;
+    padding: 10px;
+    background-color: rgb(109, 109, 245);
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.col{
+    /* span은 원래 width, height를 잡을 수 없음. inline-flex로 해서 박스를 잡을 수 있음 */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#colrank{
+    width: 10%;
+    /* background-color: aqua; */
+}
+#colmovieNm{
+    width: 60%;
+}
+#colsalesAmt{
+    width: 20%;
+    /* background-color: aquamarine; */
+}
+#colrankInten{
+    width: 10%;
+    /* background-color: brown; */
+}
+
+.spup {
+    color: darkred;
+}
+.spdown {
+    color: blue;
+}
