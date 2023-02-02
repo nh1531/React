@@ -2,7 +2,7 @@ import './Frcst.css';
 import Frcheader from './Frcheader';
 import Frcdt from './Frcdt';
 import Frccn from './Frccn';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const Frcst = () => {
@@ -73,6 +73,17 @@ const Frcst = () => {
     let [cn, setCn] = useState(frcobj["2023-02-02"]);
     let [dt, setDt] = useState();
 
+    // useEffect 콜백함수, 배열
+    // dt 변경되는 시점에 cn 변경. useEffect(()=>{}, [dt])
+    useEffect(() => {
+        console.log(dt);
+        console.log("useEffect",frcobj[dt])
+        // dt에 초기값 없으면 undefined
+        // obj에서 값을 가지고 오려고 하는데 dt 값이 없으면 오류남. 앞이 틀리면 && 이후는 실행 안함
+        // 값이 있으면 실행. undefined 예외처리
+        frcobj[dt] && setCn(frcobj[dt]);
+    }, [dt]);
+
     return (
         <>
             <Frcheader />
@@ -80,9 +91,10 @@ const Frcst = () => {
             <p>{dt}</p>
             <div className="main">
                 {/* 파라미터로 setDt 함수를 보내줌. 부모가 가지고 있는 setDt는 dt를 바꾸는 함수. 이걸 속성값으로 보냄 */}
-                <Frcdt dt={frcdt} setDt={setDt}/>
+                <Frcdt frcdt={frcdt} setDt={setDt}/>
                 {/* dt가 변경되는 시점에 cn도 바뀌어야 함 */}
-                <Frccn cn={cn}/>
+                {/* dt가 없으면 화면에 cn이 안보여야 함*/}
+                {dt && <Frccn dt={dt} cn={cn}/> }
             </div>
             
         
