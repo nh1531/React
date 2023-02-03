@@ -1,0 +1,63 @@
+.tcontent{
+    display: flex;
+    /* column 수직 */
+    flex-direction: column; 
+}
+
+.theader{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+}
+.tmain{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    /* row 가로 */
+    flex-direction: row;
+    justify-content: left;
+    align-items: top;
+    margin: 10px;
+}
+
+.tc1, .tc2, .tdetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin-top: 10px;
+    border: solid gainsboro 3px;
+}
+
+.tc1, .tc2{
+    margin-right: 15px;
+    width: 20vw;
+    height: 80vh;
+}
+
+.tdetail{
+    width: 50vw;
+    height: 80vh;
+}
+
+.tcard {
+    display: flex;
+    width: 85%;
+    height: 5%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+
+.tcard:hover, .tcard:active{
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}

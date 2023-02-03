@@ -27,7 +27,7 @@ inline -> 잡을 수 없음 */
 .mainbox1{
     width: 30vw;
     height: 90vh;
-    /* flex-direction : column 이면 justify-content과 align-items이 바뀜*/
+    /* flex-direction : column 이면 (세로정렬) justify-content과 align-items이 바뀜. */
     flex-direction: column;
     justify-content: top;
     align-items: center;
