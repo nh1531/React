@@ -146,90 +146,51 @@ const Taccident = () => {
         "totalCount": 15
       } ;
 
-      // 자바스크립트 object는 키와 값으로 분리 가능
-      // 분리 -> 배열됨
-      // 배열을 하나씩 값을 가지고 와서 출력 : map
-      let objk = Object.keys(apiData); // 배열
-      let objv = Object.values(apiData);
-      console.log("Object 키", objk);
-      console.log("Object 값", objv);
+    console.log(apiData);
+    for(let item in apiData){
+      console.log("object 순회 : ",  item);
+    }
 
-      // 배열의 map, filter
-      // map 한개씩 순회해서 새로운 배열 만듦. 배열.map( () => );
-      // map 다 나옴. filter 조건에 맞는것만 나옴
-      // if-else 삼항연산자 ? : / and &&
-      let newv ; 
-      newv = objk.map( (k) => apiData[k] );
-      // newv = Object.keys(apiData).map( (k) => apiData[k] );
-      console.log("새로운 배열", newv);
+    for(let item in Object.keys(apiData)){
+      console.log("object 키순회 : ",  item);
+    }
 
-      // 배열의 filter 
-      let data;
-      data = objk.filter((item) => item =='data' ); // 배열안의 'data'만 리턴
-      data = data.map((k) => apiData[k] );
-      console.log("filter로 data 추출", data);
-   
-      // 오브젝트 키로 접근
-      data = apiData.data;
-      console.log("오브젝트 키로 data 추출 1", data);
+    let c1, c2, data ;
 
-      data = apiData['data']; // 문자열로 싸야 함
-      console.log("오브젝트 키로 data 추출 2", data);
-      
-      // ** 대분류 추출
-      let c1 = data.map((item) => item.사고유형_대분류);
-      console.log("대분류 추출 1단계",c1);
-      // java 생성자
-      c1 = new Set(c1);
-      console.log("대분류 추출 2단계 Set으로 중복제거",c1);
-      // set을 배열로 만들고 싶음
-      c1 = [...c1];
-      console.log("대분류 추출 3단계 Set을 Array로 변환",c1);
+    // ** 데이터 data => 배열 [{항목의 내용},...]
+    data = apiData.data;
+    console.log("data", data);
 
-      // 중분류
-      let c2 = data.map((item) =>
-        (item.사고유형_대분류 + ',' + item.사고유형_중분류).split(',')
-      );
+    // ** 대분류 c1 => 배열 [대분류1, ...]
+    // item -> 오브젝트 
+    c1 =  data.map((item)=> 
+                    //item.사고유형_대분류
+                    item['사고유형_대분류'] // key값
+    );
+    //console.log("c1", c1);
+    // 중복제거 js set
+    c1 = new Set(c1); // Prototype : Set
+    c1 = [...c1]; // Prototype : Array
+    console.log("c1", c1);
 
-      /*
-      let c2 = data.map((item) =>
-        [item.사고유형_대분류, item.사고유형_중분류]
-      );
-      */
-      console.log("중분류 map으로 추출", c2);
+    // ** 중분류 c2 => 배열 [[대분류, 중분류1], ...]
+    // item -> 오브젝트가 들어감. 
+    c2 = [];
+    for(let item of data){
+      // console.log("c2 item",item); //오브젝트 1개씩 나옴
+      let temp = [];
+      temp.push(item.사고유형_대분류);
+      temp.push(item.사고유형_중분류);
+      c2.push(temp);
+    }
+    console.log("c2", c2);
 
-      // 배열의 entries
-      // 키와 값으로 분리 가능
-      for(let [k, v] of c2.entries()){
-        console.log("k", k, "v", v);
-      }
+    
 
-      // 배열
-      let c11 = data.map((item) => item.사고유형_대분류);
-      let c21 = data.map((item) => item.사고유형_중분류);
-      console.log("c11", c11);
-      console.log("c21", c21);
-
-      //오브젝트로 만들기
-      // 대분류는 4개밖에 없음. 중복됨. 중분류를 key로 만듦
-      let cobj = {};
-      for(let [k, v] of c21.entries()){
-        console.log("k", k, "v", v);
-        cobj[v] = c11[k];
-      }
-      console.log("cobj", cobj);
-
-      // {'차대사람' : ['횡단중', '차도통행중', '길가장자리구역통행중'] ... }
-      // 중분류를 배열로 넣기
-
-
-      
-
-
-
+  
     return (
         <>
-          
+          <Taccidentm c1={c1} c2={c2} data={data} />
           
         </>
     ) ;
