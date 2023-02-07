@@ -128,14 +128,10 @@ const Gal = () => {
     }
   }
 
-  let c1, item;
+  let item = data.response.body.items.item;
+  let c1 =  item.map((i)=> i['galTitle'] );
 
-  item = data.response.body.items.item;
   console.log("item", item);
-
-  c1 =  item.map((i)=> 
-    i['galTitle'] 
-  );
   console.log("c1", c1)
 
   return (
