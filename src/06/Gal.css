@@ -1,83 +1,68 @@
-.main {
+.content {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    width: 100%;
-    /* row 가로 */
-    flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-items: top;
-    margin: 10px;
+    padding: 10px;
 }
 
-.gcard, .gcardSel {
+.conleft {
+    width: 35vw;
+    height: 80vh;
+    display: flex;
+    justify-content: right;
+    align-items: top;  
+    margin: 20px 10px;
+}
+.conleft > ul {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    margin-top: 10px;
-    border: solid gainsboro 2px;
-    border-radius: 10px;
-    width: 55%;
-    height: 5%;
+    list-style: none; 
+}
+.uli, .ulisel {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    margin-bottom: 10px;
 }
 
-.gcard:hover, .gcard:active, .gcardSel{
-    background-color: darkblue;
+.uli:hover, .uli:active {
+    background-color: gray;
     color: white;
-    font-size: 20px;
-}
-
-.gc1 {
-    display: flex;
-    width: 35%;
-    height: 50vw;
-    border: 2px solid gainsboro;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
-}
-
-.gboard{
-    display: flex;
-    width: 45%;
-    height: 50vw;
-    border: 2px solid gainsboro;
-    border-radius: 5px;
-    align-items: left;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.c1{
-    display: flex;
-    width: 35%;
-    height: 10%;
-    border: 2px solid gainsboro;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-
-.img{
-    width : 100%;
-    height : 40%;
-    margin-bottom: 20px;
-}
-
-.galTitle{
-    font-size: 2em;
     font-weight: bold;
-    color: gray;
 }
 
-.galPhotographyLocation, .galPhotographer, .galPhotographyMonth{
-    font-size: 1.1em;
-    
+.conright {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: left;
+    align-items: top;  
+    margin: 10px;
 }
 
-.galSearchKeyword {
-    font-size: 1em;
-    color: gray;
+.concard {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.concard ul {
+    list-style: none;
+}
+
+.concard img {
+    width: 300px;
+    height: 200px;
 }
