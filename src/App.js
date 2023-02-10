@@ -7,8 +7,10 @@ import './App.css';
 //import Mycom from './07/Mycom';
 //import Myform from './08/Myform';
 
-import RouteMain from './09/RouteMain';
+//import RouteMain from './09/RouteMain';
 import { BrowserRouter } from 'react-router-dom';
+
+import Wmain from './10/Wmain';
 
 const App = () => {
   return (
@@ -21,9 +23,11 @@ const App = () => {
     //<Myform /> 
 
     <BrowserRouter>
-      <RouteMain />
+    {/* <RouteMain /> */}
+      <Wmain />
     </BrowserRouter>
-    
+
+
   );
 }
 
