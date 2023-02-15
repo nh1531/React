@@ -9,6 +9,7 @@ const Wmain = () => {
             <Routes>
                 <Route path="/" element={<Wmenu />} />
                 <Route path="/w1" element={<W1 />} />
+                {/* /w1/:item/:item2 */}
                 <Route path="/w2" element={<W2 />} />
             </Routes>
         </>

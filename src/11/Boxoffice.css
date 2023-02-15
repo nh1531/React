@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.mvheader{
+    width: 100vw;
+    height: 80px;
+    background-color: darkblue;
+    color: white;
+    /* flex 디폴트 row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.mvheader > h1, .mvheader > form {
+    display: flex;
+    justify-content: center;
+
+}
+
+.mvheader > h1 {
+    width: 70%;
+    align-items: center;
+
+}
+
+.mvheader > form {
+    width: 40%;
+    align-items: left;
+}
+
+/* mvheader > form > input */
+/* .mvheader input */
+
+input  {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

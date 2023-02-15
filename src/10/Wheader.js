@@ -5,7 +5,8 @@ const Wheader = ({title}) => {
             <div className="wh">
                 <h1>{title}</h1>
                 <div className="whdiv">
-                    <Link to="/">☔</Link>
+                    {/* <Link to="/">☔</Link> */}
+                    <Link to="/"><button className="homebt">홈으로</button></Link>
                 </div>
             </div>
         </>

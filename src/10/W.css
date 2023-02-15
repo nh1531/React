@@ -32,3 +32,55 @@
     height: 100%;
     border: 1px solid gray;
 }
+
+/* W1.js */
+.w2div{
+    width: 420px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.sp0, .sp1, .sp2{
+    display: inline-flex;
+    height: 100%; 
+    align-items: center;
+    font-size: 1em;
+
+}
+.sp0{
+    width: 30%;
+    justify-content: right;
+    color: gray;
+
+}
+.sp1{
+    width: 20%;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.sp2{
+    width: 30%;
+    justify-content: left;
+    font-weight: bold;
+
+}
+.homebt{
+    background-color: #CCC;
+    /* Green */
+    border: none;
+    color: black;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+.homebt:hover, .homebt:active{
+    background-color: darkgray;
+    color: white;
+}
