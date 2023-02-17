@@ -6,6 +6,7 @@ import './Boxoffice.css';
 const Boxoffice = () => {
 
     // 상영일 선택 state 변수
+    // state 변수는 set- 로만 바꿀 수 있음
     const [targetDt, setTargetDt] = useState();
 
     // input 제어
@@ -40,7 +41,9 @@ const Boxoffice = () => {
             </div>
             <div className="mvmain">
                 {/* 날짜가 바뀔 때마다 컴포넌트 다시 부름 */}
-                <BoxofficeList tDt={targetDt}/>
+                {/* null, undefined -> false */}
+                {/* targetDt가 비어있으면 && 이후 실행x */}
+                {targetDt && <BoxofficeList tDt={targetDt}/>}
             </div>
 
         </>
