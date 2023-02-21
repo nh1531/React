@@ -1,57 +1,49 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-.mvheader{
+.mvh {
     width: 100vw;
     height: 80px;
     background-color: darkblue;
     color: white;
-    /* flex 디폴트 row */
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
-.mvheader > h1, .mvheader > form {
+
+.mvh > h1, .mvh > form { 
     display: flex;
     justify-content: center;
-
 }
-
-.mvheader > h1 {
-    width: 70%;
+ 
+.mvh > h1{
+    width: 70%;  
     align-items: center;
-
 }
 
-.mvheader > form {
-    width: 40%;
+.mvh > form { 
+    width: 30%;  
     align-items: left;
 }
 
-/* mvheader > form > input */
-/* .mvheader input */
-
 input  {
     width: 80%;
-    height: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+  }
+
+.mvcontent {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: top;  
 }
 
-.mvcontent{
-    width: 100%;
-    height: 80vh;
-    margin-top: 20px;
-}
-.mvlist{
-    width: 60%;
-    height: 90%;
+.mvlist, .mvdetail, .mvrow  {
     display: flex;
-    flex-direction: column;
-    justify-content: top;
+    justify-content: center;
     align-items: center;
 }
 
@@ -59,43 +51,100 @@ input  {
     width: 80%;
     height: 20%;
     border-bottom: 2px solid black;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em;
     padding-bottom: 10px;
 }
-.mvcol1, .mvcol2, .mvcol3, .mvcol4{
-    display: inline-flex;
-    height: 100%; 
-    align-items: center;
-    font-size: 1em;
+
+.mvdetail {
+    flex-direction: column;  
+    width: 100%;
+    padding: 10px; 
+    justify-content: center;
+    align-items:top;
+    height: 100%;
+    margin: 50px 0px; 
+    border: 2px solid gray;
+    
+}
+.dtdiv {
+    width: 100%;
+    margin: 10px 0px;
 }
 
-.mvcol1, .mvitem1{
-    width: 5%;
-}
-.mvcol2, .mvitem2{
-    width: 65%;
-}
-.mvcol3, .mvitem3{
-    width: 20%;
-}
-.mvcol4, .mvitem4{
-    width: 10%;
-}
-
-.mvitem{
-    width: 80%;
-    height: 80%;
-    border-bottom: 1px solid gray; 
-}
-.mvitem:hover, .mvitem:active{
-    background-color: gainsboro;
+.dtsp1 {
+    width: 50%;
+    display: inline-flex; 
+    font-weight: bold;
     color: black;
-}
-.mvitem1, .mvitem2, .mvitem3, .mvitem4 {
-    display: inline-flex;
-    height: 100%; 
-    align-items: center;
-    font-size: 1em;
+    justify-content: left;
 }
 
+.dtsp2 {
+    width: 70%;
+    color: black
+}
+.mvlist {
+    width: 60%;
+    margin: 10px 0px;
+    flex-direction: column;
+}
+
+.mvrow, .mvrow0 {
+    width: 90%;
+    height: 40px;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.mvrow:hover, .mvrow:active {
+    background-color: gainsboro;
+}
+
+.mvrow0 {
+    background-color:gray;
+    color: white;
+    font-weight: bold;
+}
+
+.mvrow0 > span {
+    display: inline-flex;
+    justify-content: bottom;
+    align-items: center;
+}
+
+.mvcol1, .mvcol2, .mvcol3, .mvcol4 {
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+.mvcol1 {
+    width : 15% ;
+}
+
+.mvcol2 {
+    width : 50% ;
+
+}
+
+.mvcol3 {
+    width : 20% ;
+
+}
+
+.mvcol4 {
+    width : 15% ;
+
+}
+
+.mvrank {
+    display: inline-flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.mvdetail {
+    width: 30%;
+    margin-top: 10px;
+}

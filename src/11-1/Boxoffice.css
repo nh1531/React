@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.mvheader{
+    width: 100vw;
+    height: 80px;
+    background-color: darkblue;
+    color: white;
+    /* flex 디폴트 row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.mvheader > h1, .mvheader > form {
+    display: flex;
+    justify-content: center;
+
+}
+
+.mvheader > h1 {
+    width: 70%;
+    align-items: center;
+
+}
+
+.mvheader > form {
+    width: 40%;
+    align-items: left;
+}
+
+/* mvheader > form > input */
+/* .mvheader input */
+
+input  {
+    width: 80%;
+    height: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.mvcontent{
+    width: 100%;
+    height: 80vh;
+    margin-top: 20px;
+}
+.mvlist{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.mvrow{
+    width: 80%;
+    height: 20%;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+}
+.mvcol1, .mvcol2, .mvcol3, .mvcol4{
+    display: inline-flex;
+    height: 100%; 
+    align-items: center;
+    font-size: 1em;
+}
+
+.mvcol1, .mvitem1{
+    width: 5%;
+}
+.mvcol2, .mvitem2{
+    width: 65%;
+}
+.mvcol3, .mvitem3{
+    width: 20%;
+}
+.mvcol4, .mvitem4{
+    width: 10%;
+}
+
+.mvitem{
+    width: 80%;
+    height: 80%;
+    border-bottom: 1px solid gray; 
+}
+.mvitem:hover, .mvitem:active{
+    background-color: gainsboro;
+    color: black;
+}
+.mvitem1, .mvitem2, .mvitem3, .mvitem4 {
+    display: inline-flex;
+    height: 100%; 
+    align-items: center;
+    font-size: 1em;
+}
+
